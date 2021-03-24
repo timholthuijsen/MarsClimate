@@ -1,0 +1,1 @@
+/san/home/lklmd/MODELS/LMDZ.April/makegcm -d 32x32x15 -s 1 -t 0 -p std -b 32x36 gcm 

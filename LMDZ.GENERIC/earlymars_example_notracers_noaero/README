@@ -1,0 +1,2 @@
+This simulation has no tracers or aerosols. 
+At the moment, we still compile the model using -s 1, but if all of the flags in callphys.def are set to .false., the aerosol profile is set to zero everywhere in aeropacity.F90. 

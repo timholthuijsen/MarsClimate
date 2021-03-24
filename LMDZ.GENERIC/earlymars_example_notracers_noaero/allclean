@@ -1,0 +1,10 @@
+rm num_run.crash
+cp num_run0 num_run
+rm -f lrun*
+#rm -f gcm.e
+rm -f diagfi*
+rm -f gcm_3D*
+rm -f rad_bal* tem_bal*
+rm -f restart.nc restartfi.nc
+rm -f stats.nc
+echo 'Clean as a whistle'

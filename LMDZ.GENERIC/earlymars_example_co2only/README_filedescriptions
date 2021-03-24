@@ -1,0 +1,44 @@
+This file describes the use of each of the programs that are contained in this file.
+
+NECESSARY FILES:
+
+callphys.def  This file controls many of the physical parameters of the run. Look in here if you want to turn the water cycle on or off, to add aerosols, to change callcorrk libraries. Note: If you change a parameter in callphys.def, you do not need to recompile the code.
+
+diagfi.nc  This is the output file created by the gcm. It can be viewed using any nc viewer, including ncview, grads, Python, or Matlab. You can control what is written in diagfi.nc from inside the code. Most of the write statements are located at the end of the routine physiq.F90, which can be found in the model (LMDZ.GENERIC/libf/phystd/physiq.F90). You can look at it while the code is running to get an idea about whether or not things are going as you desire. If you haven't run the code yet, there will be no diagfi.nc in the folder.
+
+gases.def   This file lists all of the gases that are in your atmosphere. If your callcorrk directory has gases that are not in gases.def or vice versa, the code will stop. The callcorrk directory is what is ultimately controlling the mix of gases in your atmosphere, so verify that this is what you want it to be in callphys.def
+
+gcm.e   This is the gcm executable. It will appear after a successful code compilation. The file "gcmify" contains an example of how gcm.e can be compiled (it is explained in more detail below)
+
+newstart.e This is the executable for making new start files. It will appear after a successful compilation of the newstart code (find an example in "newstartify"). With this code you can make new start files starting from either a start_archive.nc (which contains several starting configurations) or a start.nc (which contains one starting configuration). If you are just beginning, you may want to start from an archive. When you start from an archive you can change the dimensions of the grid, the topography of the surface, and other useful parameters. If you want to make a new start file with small changes from your previous run, you'll probably want to start from a start file, which still allows you to change things like the pressure, the obliquity, the amount of tracers, etc. After you run newstart.e, you will get two files, restart.nc and restartfi.nc. In order to use them you will have to rename them start.nc and startfi.nc. At the end of each successful gcm.e run, the gcm will create new srestart.nc and restartfi.nc files which will allow you to start a new simulation from the end of your last one. It is often a good idea to keep your original start files to keep track of how you began your runs.
+
+run.def   This file controls important aspects of the code such as the number of days in the run, the number of time steps per day, the number of times the physics part of the code is run with respect to the dynamic part, and the dissipation. If your code is having numerical instabilities, you will probably come to run.def to adjust the dissipation.
+
+start.nc  This start file provides the initial state for the model. You can look at it using any .nc viewer to see what kind of initial state you have. It only has one time step. A crazy or incomplete start file can causes errors. For example, the code says that one of your variables is not periodic in longitude, it is a good idea to check out your start file to make sure everything is as it should be. 
+
+startfi.nc  This start file has everything needed for the initial state of the model which is not in start.nc. It is in one dimension, so if you open it using ncview you will have a line instead of a map. You can still look at the individual variables and check if they seem reasonable.
+
+traceur.def  This file contains all of the tracers that you want to have in your model. If the tracers in this file do not match the ones needed by the options you have chosen in callphys.def, there will be an error. There will also be an error if you have a different number of tracers in this file compared to the number you specified when you compiled gcm.e If you are changing your tracers dramatically, it is often a good idea to examine your start file to make sure that there aren't any left over populations of tracers. You can set all tracers to zero using the q=0 function of newstart.e
+
+z2sig.def  This file lists the vertical levels that you would like to have in the atmosphere, in km. The gcm has to take these levels and transform them into pressure coordinates, which means in practice that the levels in z2sig.def are close to, but not equal to, the final gcm levels. In order to get a true altitude for each gcm level, you can use the tool zrecast.def on your final diagfi.nc output file to transform the pressure coordinates into true altitudes.
+
+
+USEFUL FILES
+
+SHAZAM shows an example of a code used to launch the gcm on the gnome super computer
+
+allclean removes files created by the code so that you can start a fresh run. The types of files that allclean removes can be edited by opening the file.
+
+gcmify  shows an example of a code used to compile gcm.e. There are several flags that can be used: -d is for the model dimensions. -p indicates the planet. -t is for the number of tracers. -s is for the number of aerosols. The gcm at the end specifies that you want to compile gcm.e
+TIP: -s should always be set at 1 or more, even if there are no aerosols. If you want to run without aerosols, simply set -s 1 and then verify that all of the aerosol flags present in callphys.def are set to .false.
+
+newstartify  shows an example of a code used to compile newstart.e. It is identical to gcmify except for instead of compiling gcm.e, it compiles newstart.e.
+
+ns  This tiny executable simply copies your restart files to start files. It is a function you perform a lot, hence the code.
+
+num_run  See run0
+
+run0   is a powerful tool that allows you to run chain simulations. For example, if you would like to run for five years, instead of putting that many model days into run.def, you could put perhaps a year's worth of model days into run.def, and then use run0 to run that code five times in a row, starting each new year from the last output of the one before. At the beginning of run0 you can choose how many times to repeat your code. This code puts all of the output that you would normally see on the screen into text files called lrun#, where # is the number of the run. As it runs, it creates output files of the form diagfi#.nc for each year. Other output files are created according to what parameters you have chosen. A file called num_run specifies what number start files you want to use to launch the simulation. In the case of a model crash, the number in num_run becomes 9999 and a file called num_run.crash is created which shows which number was running when the crash occurred. In this way, instead of starting the model over again from the beginning, you can start it from the year or month which crashed.
+
+
+qwe   This small executable gives an ugly but useful example of how to use sed to display data from several files. It is often the case that there are several lines that you need to check in run.def, callphys.def, traceur.def, or gases.def. You would like to check these every time before you launch a simulation, just to be sure you are running with the correct parameters. You can use sed to display just the parameters which interest you from each file.

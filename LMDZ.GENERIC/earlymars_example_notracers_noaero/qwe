@@ -1,0 +1,13 @@
+echo ' ' 
+echo 'run0:'
+sed '6!d' run0
+echo ' '
+echo 'num_run:'
+head num_run
+echo ' '
+echo 'SHAZAM:'
+sed '13!d' SHAZAM
+echo 'gases.def:'
+head -8 gases.def
+echo 'traceur.def:'
+head traceur.def
