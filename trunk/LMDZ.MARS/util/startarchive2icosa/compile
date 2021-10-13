@@ -1,0 +1,25 @@
+#!/usr/bin/bash
+
+source /scratch/cnt0027/lmd1167/adelavois/models/code/XIOS/arch.env
+source /scratch/cnt0027/lmd1167/adelavois/models/code/XIOS/arch.path
+
+mpif90 -g -traceback start_archive2icosa.f90 \
+$NETCDF_INCDIR $NETCDF_LIBDIR $NETCDF_LIB \
+$HDF5_INCDIR $HDF5_LIBDIR $HDF5_LIB \
+-I /scratch/cnt0027/lmd1167/adelavois/models/code/XIOS/inc \
+-L /scratch/cnt0027/lmd1167/adelavois/models/code/XIOS/lib -lxios -lstdc++ \
+-o start_archive2icosa
+
+mpif90 -g -traceback rearrange_startphy.f90 \
+$NETCDF_INCDIR $NETCDF_LIBDIR $NETCDF_LIB \
+$HDF5_INCDIR $HDF5_LIBDIR $HDF5_LIB \
+-I /scratch/cnt0027/lmd1167/adelavois/models/code/XIOS/inc \
+-L /scratch/cnt0027/lmd1167/adelavois/models/code/XIOS/lib -lxios -lstdc++ \
+-o rearrange_startphy
+
+#mpif90 -g -traceback rearrange_startphy_tsurf_cst.f90 \
+#$NETCDF_INCDIR $NETCDF_LIBDIR $NETCDF_LIB \
+#$HDF5_INCDIR $HDF5_LIBDIR $HDF5_LIB \
+#-I /scratch/cnt0027/lmd1167/adelavois/models/code/XIOS/inc \
+#-L /scratch/cnt0027/lmd1167/adelavois/models/code/XIOS/lib -lxios -lstdc++ \
+#-o rearrange_startphy_tsurf_cst

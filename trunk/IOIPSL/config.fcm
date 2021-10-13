@@ -1,0 +1,4 @@
+%COMPIL_FFLAGS %PROD_FFLAGS -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/netcdf/include
+%LD_FLAGS %BASE_LD
+%CPP_KEY CPP_NONE
+%LIB -L/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/netcdf/lib -lnetcdff  

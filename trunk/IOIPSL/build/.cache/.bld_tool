@@ -1,0 +1,39 @@
+FPPFLAGS     -P -traditional
+REMOTE_SHELL remsh
+INTERFACE    file
+CC_INCLUDE   -I
+LD_LIBLINK   -l
+SHELL        /bin/bash
+FC           gfortran
+CC_OUTPUT    -o
+ARFLAGS      rs
+LDFLAGS       -L/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/netcdf/lib -lnetcdff
+CPPFLAGS     -C
+GENINTERFACE ECMWF
+MAKE_JOB     -j
+FC_INCLUDE   -I
+CC           cc
+FC_OUTPUT    -o
+MIRROR       rsync
+MAKE_SILENT  -s
+FC_COMPILE   -c
+LD_LIBSEARCH -L
+FPP          %FPP
+CPPKEYS      
+CFLAGS       
+FC_DEFINE    -D
+CPP_DEFINE   -D
+MAKEFLAGS    
+FPP_INCLUDE  -I
+LD_OUTPUT    -o
+CC_COMPILE   -c
+CPP          cpp
+FPPKEYS      CPP_NONE %FPP_DEF
+GRAPHIC_DIFF xxdiff
+FFLAGS       -c -fdefault-real-8 -fdefault-double-8 -ffree-line-length-none -fno-align-commons -fcray-pointer -O3 -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/netcdf/include
+CC_DEFINE    -D
+FPP_DEFINE   -D
+MAKE         make
+LD           gfortran
+CPP_INCLUDE  -I
+AR           ar

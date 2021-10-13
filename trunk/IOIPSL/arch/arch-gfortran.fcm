@@ -1,0 +1,14 @@
+%COMPILER            gfortran
+%LINK                gfortran
+%AR                  ar
+%MAKE                make
+%FPP_FLAGS           -P -traditional
+%BASE_FFLAGS         -c -fdefault-real-8 -fdefault-double-8 -ffree-line-length-none -fno-align-commons -fcray-pointer
+%PROD_FFLAGS         -O3
+%DEV_FFLAGS          -O -Wall -fbounds-check
+%DEBUG_FFLAGS        -ffpe-trap=invalid,zero,overflow -fbounds-check -g3 -O0 -fstack-protector-all -finit-real=snan -fbacktrace
+%MPI_FFLAGS          
+%OMP_FFLAGS          
+%BASE_LD             
+%MPI_LD              
+%OMP_LD              

@@ -1,0 +1,16 @@
+3.2e-4            Minimum ice depth coefficient
+1.3e-3            Maximum ice depth coefficient
+500.              Minimum ice thermal inertia
+2000.             Maximum ice thermal inertia        
+/xvik_Dmin_Imin   Path to xvik.F outputs : Ice depth min and thermal inertia min
+/xvik_Dmin_Imax   Path to xvik.F outputs : Ice depth min and thermal inertia max
+/xvik_Dmax_Imin   Path to xvik.F outputs : Ice depth max and thermal inertia min
+/xvik_Dmax_Imax   Path to xvik.F outputs : Ice depth max and thermal inertia max
+4                 Year of xvik outputs to use
+3                 Xvik files in sol (1), ls (2) or both (3)'
+1	          Output file to plot COST(DN,DS) (1) or COST(IN,IS) (2)
+
+This file can be used as follows :
+
+fit_Iceinertia_MONSicedepth.e < fit_Iceinertia_MONSicedepth.def
+	

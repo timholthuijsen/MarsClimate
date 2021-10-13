@@ -1,0 +1,18 @@
+This folder contains 5 files : 
+
+- README : this file
+
+- fit_Iceinertia_MONSicedepth.F : 
+This program is used to compute best-fit cap albedo, ICE DEPTH  and total CO2 inventory.
+It takes xvik.F outputs as inputs and computes 3 files : 
+  -> minimization.txt that contains the model/obs difference function of co2 cycle parameters
+  -> pvlfit that contains VL1 pressure based on optimal parameters 
+  -> xprestotfit that contains CO2 ice inventory
+
+
+- compile_fit : this file can be used to compile fit_Iceinertia_MONSicedepth.F, creating a file 'fit_Iceinertia_MONSicedepth.e'
+
+- fit_Iceinertia_MONSicedepth.def : can be used as input for fit_Iceinertia_MONSicedepth.e
+
+- VL1 : file used by fit_Iceinertia_MONSicedepth.F that contains harmonics of VL1 surface pressure and should be in the same folder than fit_Iceinertia_MONSicedepth.e
+

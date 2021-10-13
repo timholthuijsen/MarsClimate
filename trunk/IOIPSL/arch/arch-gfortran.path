@@ -1,0 +1,11 @@
+NETCDF_INCDIR="-I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/netcdf/include"
+NETCDF_LIBDIR="-L/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/netcdf/lib"
+NETCDF_LIB="-lnetcdff"
+
+HDF5_INCDIR=""
+HDF5_LIBDIR=""
+HDF5_LIB=""
+
+MPI_INCDIR=""
+MPI_LIBDIR=""
+MPI_LIB=""

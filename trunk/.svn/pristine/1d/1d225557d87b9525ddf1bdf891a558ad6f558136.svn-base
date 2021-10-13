@@ -1,0 +1,39 @@
+diagfi.nc
+n
+y
+n
+
+
+-----------------------------------------------------------------------
+ABOVE is the minimal list of inputs to be fed to "lslin.e" if you don t
+want to reply directly to the program:
+
+1) complete name of file to be read
+
+2) Do you want to specify the beginning day of the file (y/n) ?
+  (if 'n', the value stored in the controle field will be used)
+/!\ if 'y', insert a new line just below with the value of the 
+    beginning day of the file you want to specify
+
+3) Automatic Ls timestep (y/n)?
+/!\ if 'n', insert 2 new line just below with, respectively,
+    the new timestep in Ls (deg)
+    the first Ls (deg)
+
+4) Average data within the Ls timestep (y/n) or interpolate ?
+
+-----------------------------------------------------------------------
+Here is another example with this time the maximum number of user's inputs :
+
+diagfi.nc
+y                    # see 2)
+0                    # see 2) first day of the file
+y                    # see 3)
+5                    # see 3) new Ls timestep
+2.5                  # see 3) first Ls value
+y                    # see 4)
+
+
+-----------------------------------------------------------------------
+USE :
+localtime.e < localtime.def

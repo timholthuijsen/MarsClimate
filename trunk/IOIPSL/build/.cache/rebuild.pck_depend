@@ -1,0 +1,3 @@
+INTNAME flio_rbld.f90::flio_rbld
+USE     flio_rbld.f90::defprec
+USE     flio_rbld.f90::IOIPSL

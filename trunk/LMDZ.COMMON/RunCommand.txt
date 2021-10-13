@@ -1,0 +1,15 @@
+bash makelmdz_fcm.bash -fcm_path /mnt/d/OneDrive/MarsClimate/MetJacky/FCM_V1.2/bin -arch local -d 64x48x29 -p mars gcm
+
+
+For laptop:
+
+bash makelmdz_fcm.bash -fcm_path /mnt/c/Users/timho/OneDrive/MarsClimate/MetJacky/FCM_V1.2/bin -arch local -d 64x48x29 -p mars gcm
+
+
+Command to make it work then:
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/netcdf/lib
+
+then go to:
+/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/LMDZ.COMMON/bin
+and run: 
+./newstart_64x48x29_phymars_seq.e

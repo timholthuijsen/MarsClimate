@@ -1,0 +1,220 @@
+ #
+ # Values of datadir comes from run.def
+ #
+ datadir = /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/datadir
+ #
+ # Values of tracer comes from run.def
+ #
+ tracer = TRUE 
+ #
+ # Values of diurnal comes from run.def
+ #
+ diurnal = TRUE 
+ #
+ # Values of season comes from run.def
+ #
+ season = TRUE 
+ #
+ # Values of lwrite comes from run.def
+ #
+ lwrite = FALSE 
+ #
+ # Values of callstats comes from run.def
+ #
+ callstats = TRUE 
+ #
+ # Values of calleofdump comes from run.def
+ #
+ calleofdump = FALSE 
+ #
+ # Values of iaervar comes from run.def
+ #
+ iaervar =           24
+ #
+ # Values of tauvis comes from run.def
+ #
+ tauvis =   0.10000000000000001     
+ #
+ # Values of iddist comes from run.def
+ #
+ iddist =            3
+ #
+ # Values of topdustref comes from run.def
+ #
+ topdustref =    55.000000000000000     
+ #
+ # Values of callrad comes from run.def
+ #
+ callrad = TRUE 
+ #
+ # Values of callnlte comes from run.def
+ #
+ callnlte = TRUE 
+ #
+ # Values of nltemodel comes from run.def
+ #
+ nltemodel =            2
+ #
+ # Values of callnirco2 comes from run.def
+ #
+ callnirco2 = TRUE 
+ #
+ # Values of nircorr comes from run.def
+ #
+ nircorr =            1
+ #
+ # Values of calldifv comes from run.def
+ #
+ calldifv = TRUE 
+ #
+ # Values of calltherm comes from run.def
+ #
+ calltherm = TRUE 
+ #
+ # Values of calladj comes from run.def
+ #
+ calladj = TRUE 
+ #
+ # Values of callrichsl comes from run.def
+ #
+ callrichsl = TRUE 
+ #
+ # Values of callcond comes from run.def
+ #
+ callcond = TRUE 
+ #
+ # Values of callsoil comes from run.def
+ #
+ callsoil = TRUE 
+ #
+ # Values of calllott comes from run.def
+ #
+ calllott = TRUE 
+ #
+ # Values of iradia comes from run.def
+ #
+ iradia =            1
+ #
+ # Values of callg2d comes from run.def
+ #
+ callg2d = FALSE 
+ #
+ # Values of rayleigh comes from run.def
+ #
+ rayleigh = FALSE 
+ #
+ # Values of dustbin comes from run.def
+ #
+ dustbin =            2
+ #
+ # Values of active comes from run.def
+ #
+ active = TRUE 
+ #
+ # Values of doubleq comes from run.def
+ #
+ doubleq = TRUE 
+ #
+ # Values of lifting comes from run.def
+ #
+ lifting = TRUE 
+ #
+ # Values of callddevil comes from run.def
+ #
+ callddevil = FALSE 
+ #
+ # Values of sedimentation comes from run.def
+ #
+ sedimentation = TRUE 
+ #
+ # Values of activice comes from run.def
+ #
+ activice = TRUE 
+ #
+ # Values of water comes from run.def
+ #
+ water = TRUE 
+ #
+ # Values of nuice_sed comes from run.def
+ #
+ nuice_sed =   0.10000000000000001     
+ #
+ # Values of microphys comes from run.def
+ #
+ microphys = TRUE 
+ #
+ # Values of mteta comes from run.def
+ #
+ mteta =   0.94999999999999996     
+ #
+ # Values of scavenging comes from run.def
+ #
+ scavenging = TRUE 
+ #
+ # Values of caps comes from run.def
+ #
+ caps = TRUE 
+ #
+ # Values of albedo_h2o_ice comes from run.def
+ #
+ albedo_h2o_ice =   0.34999999999999998     
+ #
+ # Values of inert_h2o_ice comes from run.def
+ #
+ inert_h2o_ice =    800.00000000000000     
+ #
+ # Values of frost_albedo_threshold comes from run.def
+ #
+ frost_albedo_threshold =    5.0000000000000001E-003
+ #
+ # Values of photochem comes from run.def
+ #
+ photochem = TRUE 
+ #
+ # Values of naerkind comes from run.def
+ #
+ naerkind =            2
+ #
+ # Values of callthermos comes from run.def
+ #
+ callthermos = TRUE 
+ #
+ # Values of thermoswater comes from run.def
+ #
+ thermoswater = FALSE 
+ #
+ # Values of callconduct comes from run.def
+ #
+ callconduct = TRUE 
+ #
+ # Values of calleuv comes from run.def
+ #
+ calleuv = TRUE 
+ #
+ # Values of callmolvis comes from run.def
+ #
+ callmolvis = TRUE 
+ #
+ # Values of callmoldiff comes from run.def
+ #
+ callmoldiff = TRUE 
+ #
+ # Values of thermochem comes from run.def
+ #
+ thermochem = TRUE 
+ #
+ # Values of solvarmod comes from run.def
+ #
+ solvarmod =            0
+ #
+ # Values of fixed_euv_value comes from run.def
+ #
+ fixed_euv_value =    140.00000000000000     
+ #
+ # Values of solvaryear comes from run.def
+ #
+ solvaryear =           24
+ #
+ # Values of euveff comes from run.def
+ #
+ euveff =   0.20999999999999999     

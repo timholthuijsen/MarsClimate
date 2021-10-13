@@ -1,0 +1,8 @@
+# The following script can be used to compile fit_Iceinertia_MONSicedepth.F
+
+gfortran fit_Iceinertia_MONSicedepth.F -o fit_Iceinertia_MONSicedepth.e
+
+
+
+
+

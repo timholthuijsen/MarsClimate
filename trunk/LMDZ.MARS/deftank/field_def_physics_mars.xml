@@ -1,0 +1,65 @@
+<!-- =========================================================================================================== -->
+<!-- field_def_physics_mars.xml                                                                                  -->
+<!-- Definition of all existing variables that can be output from Martian physics                                -->
+<!-- =========================================================================================================== -->
+
+    <field_definition prec="4" 
+                      freq_op="1ts"
+                      enabled=".TRUE.">
+        
+        <!-- 0D variables -->
+        <field_group id="fields_0D" grid_ref="scalarpoint">
+            <field id="ls"
+                   long_name="Solar longitude"
+                   unit="degrees" />
+        </field_group>    
+        
+        <!-- 2D variables -->
+        <field_group id="fields_2D" domain_ref="dom_glo">
+            <field id="ps"
+                   long_name="Surface Pressure" 
+                   unit="Pa" />
+            <field id="area"
+                   long_name="Mesh area"
+                   unit="m2" />
+            <field id="tsurf"
+                   long_name="Surface Temperature"
+                   unit="K" />
+            <field id="co2ice"
+                   long_name="CO2 ice thickness"
+                   unit="kg/m2" />
+            <field id="OLR"
+                   long_name="outgoing longwave radiation" 
+                   unit="W/m2" />
+            <field id="ISR"
+                   long_name="incoming solar radiation"  
+                   unit="W/m2" />
+        </field_group>
+
+        <!-- 3D variables -->
+        <field_group id="fields_3D" domain_ref="dom_glo" axis_ref="altitude">
+        <!--<field_group id="fields_3D" grid_ref="grid_3d">-->
+            <field id="temperature"
+                   long_name="Atmospheric temperature"
+                   unit="K" />
+            <field id="u"
+                   long_name="Eastward Zonal Wind"
+                   unit="m/s" />
+            <field id="v" 
+                   long_name="Northward Meridional Wind" 
+                   unit="m/s" />
+            <field id="co2" 
+                   long_name="co2 mass mixing ratio" 
+                   unit="kg/kg" />
+        </field_group>
+
+        <!-- soil variables -->
+        <field_group id="fields_soil" domain_ref="dom_glo" axis_ref="soil_layers">
+            <field id="tsoil"
+                   long_name="Soil temperature"
+                   unit="K" />
+            <field id="inertiedat"
+                   long_name="Soil thermal inertia"
+                   unit="J/kg/K" />
+        </field_group>
+    </field_definition>

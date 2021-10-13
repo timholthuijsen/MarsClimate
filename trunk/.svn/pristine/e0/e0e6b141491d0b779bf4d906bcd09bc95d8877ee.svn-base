@@ -1,0 +1,22 @@
+Scripts in this directory are illustrative examples of how to
+download and install IOIPSL, e.g.:
+1) install_ioipsl_occigen.bash: everything is set for Occigen, just run:
+./install_ioipsl_occigen.bash
+And output modules and library will be in ../../IOIPSL
+(with links in 'modipsl/lib' and 'modipsl/bin' for backward compatibility)
+
+2) install_ioipsl_gfortran.bash, and install_ioipsl_pgf90.bash and
+install_ioipsl_ifort.bash are more general examples
+for installing IOIPSL on a machine with these compilers.
+For these you might need to ajust the location of the NetCDF library
+(see the NETCDF_HOME variable in the script)
+And you will need to set up arch files (which should match those
+of the GCM) to adequately compile the library
+
+Note that it is a good idea to install IOIPSL alongside LMDZ
+so that its version can be tracked (and potentialy updated), as it is
+downloaded from a different svn repository.
+
+
+
+

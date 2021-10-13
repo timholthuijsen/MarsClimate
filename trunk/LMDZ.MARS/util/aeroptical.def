@@ -1,0 +1,17 @@
+diagfi.nc
+0
+5.e-7
+~/datadir
+ext
+
+
+
+##----------------------------------------------------------
+1) Name of the GCM input file
+2) Value of the water ice effective radius (in meters)
+  (if 0, reffwice is read in the input file ;
+   usually between 3.e-6m and 5.e-6m )
+3) The wavelength at which the output opacities are calibrated (in meters)
+4) Directory where the optical properties files are
+5) Opacity type : extinction (ext) or absorption (abs)
+

@@ -1,0 +1,17 @@
+MCS_MY29_mo1.nc
+diagfi1_P.nc
+0
+temp
+rho
+reffdust
+
+##----------------------------------------------------------------
+# 1st line is the Observer file, containing :
+dtemp,ddust,dwice,dtimeave,dtimemax,dtimemin,dnumbintemp,dnumbindust,dnumbinwice,
+ntemp,ndust,nwice,ntimeave,ntimemax,ntimemin,nnumbintemp,nnumbindust,nnumbinwice
+# 2nd line is the GCM file : diagfi,concatnc or stats
+ (with the same altitude type as MCS)
+# 3rd line is the starttimeoffset of the GCM file
+# List of X GCM 4D variables to be interpolated and binned
+# Blank line at the end
+

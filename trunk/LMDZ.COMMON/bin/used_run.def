@@ -1,0 +1,517 @@
+ # 
+ # This file is linked to the following files :
+ # 
+ INCLUDEDEF = callphys.def
+ # 
+ #
+ # Values of lunout are all defaults.
+ #
+ lunout =            6
+ #
+ # Values of prt_level are all defaults.
+ #
+ prt_level =            0
+ #
+ # Values of planet_type comes from run.def
+ #
+ planet_type = mars
+ #
+ # Values of calend are all defaults.
+ #
+ calend = earth_360d
+ #
+ # Values of dayref are all defaults.
+ #
+ dayref =            1
+ #
+ # Values of anneeref are all defaults.
+ #
+ anneeref =         1998
+ #
+ # Values of raz_date are all defaults.
+ #
+ raz_date =            0
+ #
+ # Values of resetvarc are all defaults.
+ #
+ resetvarc = FALSE 
+ #
+ # Values of nday comes from run.def
+ #
+ nday =         9999
+ #
+ # Values of ndynstep are all defaults.
+ #
+ ndynstep =        -9999
+ #
+ # Values of starttime are all defaults.
+ #
+ starttime =    0.0000000000000000     
+ #
+ # Values of timestart are all defaults.
+ #
+ timestart =   -9999.0000000000000     
+ #
+ # Values of ecritstart are all defaults.
+ #
+ ecritstart =            0
+ #
+ # Values of less1day are all defaults.
+ #
+ less1day = FALSE 
+ #
+ # Values of fractday are all defaults.
+ #
+ fractday =    1.0000000000000000E-002
+ #
+ # Values of day_step comes from run.def
+ #
+ day_step =          960
+ #
+ # Values of nsplit_phys are all defaults.
+ #
+ nsplit_phys =            1
+ #
+ # Values of iperiod comes from run.def
+ #
+ iperiod =            5
+ #
+ # Values of iapp_tracvl are all defaults.
+ #
+ iapp_tracvl =            5
+ #
+ # Values of force_conserv_tracer are all defaults.
+ #
+ force_conserv_tracer = FALSE 
+ #
+ # Values of iconser comes from run.def
+ #
+ iconser =          120
+ #
+ # Values of iecri are all defaults.
+ #
+ iecri =            1
+ #
+ # Values of periodav are all defaults.
+ #
+ periodav =    1.0000000000000000     
+ #
+ # Values of output_grads_dyn are all defaults.
+ #
+ output_grads_dyn = FALSE 
+ #
+ # Values of idissip comes from run.def
+ #
+ idissip =            1
+ #
+ # Values of dissip_period are all defaults.
+ #
+ dissip_period =            1
+ #
+ # Values of lstardis comes from run.def
+ #
+ lstardis = TRUE 
+ #
+ # Values of nitergdiv comes from run.def
+ #
+ nitergdiv =            1
+ #
+ # Values of nitergrot comes from run.def
+ #
+ nitergrot =            2
+ #
+ # Values of niterh comes from run.def
+ #
+ niterh =            2
+ #
+ # Values of tetagdiv comes from run.def
+ #
+ tetagdiv =    2500.0000000000000     
+ #
+ # Values of tetagrot comes from run.def
+ #
+ tetagrot =    5000.0000000000000     
+ #
+ # Values of tetatemp comes from run.def
+ #
+ tetatemp =    5000.0000000000000     
+ #
+ # Values of dissip_factz are all defaults.
+ #
+ dissip_factz =    4.0000000000000000     
+ #
+ # Values of dissip_deltaz are all defaults.
+ #
+ dissip_deltaz =    10.000000000000000     
+ #
+ # Values of dissip_zref are all defaults.
+ #
+ dissip_zref =    30.000000000000000     
+ #
+ # Values of dissip_fac_mid comes from run.def
+ #
+ dissip_fac_mid =    3.0000000000000000     
+ #
+ # Values of dissip_fac_up comes from run.def
+ #
+ dissip_fac_up =    30.000000000000000     
+ #
+ # Values of dissip_hdelta are all defaults.
+ #
+ dissip_hdelta =    5.0000000000000000     
+ #
+ # Values of dissip_pupstart are all defaults.
+ #
+ dissip_pupstart =    1000.0000000000000     
+ #
+ # Values of iflag_top_bound are all defaults.
+ #
+ iflag_top_bound =            0
+ #
+ # Values of mode_top_bound are all defaults.
+ #
+ mode_top_bound =            3
+ #
+ # Values of tau_top_bound are all defaults.
+ #
+ tau_top_bound =    1.0000000000000001E-005
+ #
+ # Values of callsponge comes from run.def
+ #
+ callsponge = TRUE 
+ #
+ # Values of nsponge comes from run.def
+ #
+ nsponge =            3
+ #
+ # Values of mode_sponge comes from run.def
+ #
+ mode_sponge =            3
+ #
+ # Values of tetasponge comes from run.def
+ #
+ tetasponge =    30000.000000000000     
+ #
+ # Values of ngroup are all defaults.
+ #
+ ngroup =            3
+ #
+ # Values of coefdis comes from run.def
+ #
+ coefdis =    0.0000000000000000     
+ #
+ # Values of purmats comes from run.def
+ #
+ purmats = FALSE 
+ #
+ # Values of ok_guide are all defaults.
+ #
+ ok_guide = FALSE 
+ #
+ # Values of read_start are all defaults.
+ #
+ read_start = TRUE 
+ #
+ # Values of iflag_phys are all defaults.
+ #
+ iflag_phys =            1
+ #
+ # Values of iphysiq comes from run.def
+ #
+ iphysiq =           10
+ #
+ # Values of cpofT are all defaults.
+ #
+ cpofT = FALSE 
+ #
+ # Values of iflag_trac are all defaults.
+ #
+ iflag_trac =            1
+ #
+ # Values of ip_ebil_dyn are all defaults.
+ #
+ ip_ebil_dyn =            0
+ #
+ # Values of offline are all defaults.
+ #
+ offline = FALSE 
+ #
+ # Values of type_trac are all defaults.
+ #
+ type_trac = lmdz
+ #
+ # Values of config_inca are all defaults.
+ #
+ config_inca = none
+ #
+ # Values of ok_dynzon are all defaults.
+ #
+ ok_dynzon = FALSE 
+ #
+ # Values of ok_dyn_ins are all defaults.
+ #
+ ok_dyn_ins = FALSE 
+ #
+ # Values of ok_dyn_ave are all defaults.
+ #
+ ok_dyn_ave = FALSE 
+ #
+ # Values of use_filtre_fft are all defaults.
+ #
+ use_filtre_fft = FALSE 
+ #
+ # Values of ok_strato are all defaults.
+ #
+ ok_strato = TRUE 
+ #
+ # Values of ok_gradsfile are all defaults.
+ #
+ ok_gradsfile = FALSE 
+ #
+ # Values of ok_limit are all defaults.
+ #
+ ok_limit = TRUE 
+ #
+ # Values of ok_etat0 are all defaults.
+ #
+ ok_etat0 = TRUE 
+ #
+ # Values of read_orop are all defaults.
+ #
+ read_orop = FALSE 
+ #
+ # Values of clon comes from run.def
+ #
+ clon =    63.000000000000000     
+ #
+ # Values of clat comes from run.def
+ #
+ clat =    0.0000000000000000     
+ #
+ # Values of grossismx comes from run.def
+ #
+ grossismx =    1.0000000000000000     
+ #
+ # Values of grossismy comes from run.def
+ #
+ grossismy =    1.0000000000000000     
+ #
+ # Values of fxyhypb comes from run.def
+ #
+ fxyhypb = FALSE 
+ #
+ # Values of dzoomx comes from run.def
+ #
+ dzoomx =    0.0000000000000000     
+ #
+ # Values of dzoomy comes from run.def
+ #
+ dzoomy =    0.0000000000000000     
+ #
+ # Values of taux comes from run.def
+ #
+ taux =    2.0000000000000000     
+ #
+ # Values of tauy comes from run.def
+ #
+ tauy =    2.0000000000000000     
+ #
+ # Values of ysinus comes from run.def
+ #
+ ysinus = FALSE 
+ #
+ # Values of disvert_type are all defaults.
+ #
+ disvert_type =            2
+ #
+ # Values of pressure_exner are all defaults.
+ #
+ pressure_exner = FALSE 
+ #
+ # Values of hybrid comes from run.def
+ #
+ hybrid = TRUE 
+ #
+ # Values of debug are all defaults.
+ #
+ debug = FALSE 
+ #
+ # Values of ecritphy comes from run.def
+ #
+ ecritphy =          240
+ #
+ # Values of startphy_file are all defaults.
+ #
+ startphy_file = TRUE 
+ #
+ # Values of tke_heat_flux are all defaults.
+ #
+ tke_heat_flux =    0.0000000000000000     
+ #
+ # Values of callslope are all defaults.
+ #
+ callslope = FALSE 
+ #
+ # Values of callyamada4 are all defaults.
+ #
+ callyamada4 = TRUE 
+ #
+ # Values of calllott_nonoro are all defaults.
+ #
+ calllott_nonoro = FALSE 
+ #
+ # Values of rdstorm are all defaults.
+ #
+ rdstorm = FALSE 
+ #
+ # Values of coeff_detrainment are all defaults.
+ #
+ coeff_detrainment =    5.0000000000000003E-002
+ #
+ # Values of slpwind are all defaults.
+ #
+ slpwind = FALSE 
+ #
+ # Values of latentheat_surfwater are all defaults.
+ #
+ latentheat_surfwater = TRUE 
+ #
+ # Values of submicron are all defaults.
+ #
+ submicron = FALSE 
+ #
+ # Values of dustinjection are all defaults.
+ #
+ dustinjection =            0
+ #
+ # Values of coeff_injection are all defaults.
+ #
+ coeff_injection =    1.0000000000000000     
+ #
+ # Values of ti_injection are all defaults.
+ #
+ ti_injection =    10.000000000000000     
+ #
+ # Values of tf_injection are all defaults.
+ #
+ tf_injection =    12.000000000000000     
+ #
+ # Values of freedust are all defaults.
+ #
+ freedust = FALSE 
+ #
+ # Values of dustscaling_mode are all defaults.
+ #
+ dustscaling_mode =            1
+ #
+ # Values of dustiropacity are all defaults.
+ #
+ dustiropacity = tes
+ #
+ # Values of hdo are all defaults.
+ #
+ hdo = FALSE 
+ #
+ # Values of hdofrac are all defaults.
+ #
+ hdofrac = TRUE 
+ #
+ # Values of activeco2ice are all defaults.
+ #
+ activeco2ice = FALSE 
+ #
+ # Values of CLFfixval are all defaults.
+ #
+ CLFfixval =    1.0000000000000000     
+ #
+ # Values of CLFvarying are all defaults.
+ #
+ CLFvarying = FALSE 
+ #
+ # Values of co2clouds are all defaults.
+ #
+ co2clouds = FALSE 
+ #
+ # Values of co2useh2o are all defaults.
+ #
+ co2useh2o = FALSE 
+ #
+ # Values of meteo_flux are all defaults.
+ #
+ meteo_flux = FALSE 
+ #
+ # Values of CLFvaryingCO2 are all defaults.
+ #
+ CLFvaryingCO2 = FALSE 
+ #
+ # Values of spantCO2 are all defaults.
+ #
+ spantCO2 =            0
+ #
+ # Values of satindexco2 are all defaults.
+ #
+ satindexco2 = TRUE 
+ #
+ # Values of tifeedback are all defaults.
+ #
+ tifeedback = FALSE 
+ #
+ # Values of nuiceco2_sed are all defaults.
+ #
+ nuiceco2_sed =   0.45000000000000001     
+ #
+ # Values of nuiceco2_ref are all defaults.
+ #
+ nuiceco2_ref =   0.45000000000000001     
+ #
+ # Values of nuice_ref are all defaults.
+ #
+ nuice_ref =   0.45000000000000001     
+ #
+ # Values of ccn_factor are all defaults.
+ #
+ ccn_factor =    4.5000000000000000     
+ #
+ # Values of supersat are all defaults.
+ #
+ supersat = TRUE 
+ #
+ # Values of temp_dependant_m are all defaults.
+ #
+ temp_dependant_m = FALSE 
+ #
+ # Values of scavco2cond are all defaults.
+ #
+ scavco2cond = FALSE 
+ #
+ # Values of albedo_h2o_cap are all defaults.
+ #
+ albedo_h2o_cap =   0.34999999999999998     
+ #
+ # Values of albedo_h2o_frost are all defaults.
+ #
+ albedo_h2o_frost =   0.34999999999999998     
+ #
+ # Values of cap_albedo are all defaults.
+ #
+ cap_albedo = FALSE 
+ #
+ # Values of tituscap are all defaults.
+ #
+ tituscap = FALSE 
+ #
+ # Values of ichemistry are all defaults.
+ #
+ ichemistry =            1
+ #
+ # Values of check_physics_inputs are all defaults.
+ #
+ check_physics_inputs = FALSE 
+ #
+ # Values of check_physics_outputs are all defaults.
+ #
+ check_physics_outputs = FALSE 
+ #
+ # Values of icedryness are all defaults.
+ #
+ icedryness =    1.0000000000000000     

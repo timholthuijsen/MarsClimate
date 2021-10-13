@@ -1,0 +1,54 @@
+Making initial condition files for icosa_lmdz.exe from
+an LMDZ start_archive.nc file
+
+What you need to do/know before:
+---------------------------
+Run a dynamico simulation (with startphy_file=false for example) with the desired resolution to get
+start.nc and startfi.nc. These files will be used as reference (rename as *_ref.nc) in the script.
+
+Job_mpi is the file you need to run start_archive2icosa on Occigen
+
+Warning: the input start_archive.nc file must include SSO parameters in this version, which is only available with a modified start2archive: start2archive_SSO
+
+This script is currently under development and still needs to be finalized.
+So you must be careful to adapt the script to your own needs and replace hardcoded variables.
+Any suggestion for improvement is welcome.
+
+In a nutshell:
+--------------
+1) input file start_archive.nc needs some minor adaptations:
+- variable "nivsigs" needs be renamed "sigs" (XIOS requires CF-compliant files)
+ncrename -vnivsigs,sigs start_archive.nc
+- input file start_archive.nc need be converted to NetCDF4 format
+nccopy -k 'netCDF-4' start_archive.nc start_archive_nc4.nc
+2) script "compile" can be used to compile main tool start_archive2icosa.f90
+   as well as rearrange_startphy.f90
+3) to run, start_archive2icosa needs input files:
+- "start_archive_nc4.nc" : from step 1
+- "start_icosa_ref.nc" : a start.nc file from an icosa_lmdz.exe run (contains
+  all the necessary information about the icosaedral grid at that resolution)
+- "startphy_icosa_ref.nc" : a startfi.nc file from an icosa_lmdz.exe run (contains
+  all the necessary information about colums from physics)
+- "surface_nc4.nc" : Mars topography file (also needs to be in NetCDF4 format)
+- "iodef.xml" : information about field names and grids for XIOS
+NB: interpolation of HR topography requires lots of memory; see e.g. job_mpi
+job script where 2 nodes (56 cores) are requested but only 28 processes
+are run.
+4) start_archive2icosa outputs files "start_icosa_prefinalize.nc" and "startfi_prefinalize.nc"
+  require a couple of extra modifications. Script "icosa_finalize.bash" does
+  the required changes and generates files "start_icosa.nc" and "startfi.nc" that
+  can be used as inputs by icosa_lmdz.exe
+5) When using these start one must add in run_icosa.def the extra flag
+etat0_start_file_colocated = true
+
+Additional comments:
+--------------------
+- script "compile" assumes XIOS is to be found in "/scratch/cnt0027/lmd1167/adelavois/models/code/XIOS"
+  to be adapted to your own settings
+- "nccopy" is a standard netcdf tool available via e.g.:
+module load intel/17.0 intelmpi/2017.0.098 hdf5/1.8.17 netcdf/4.4.0_fortran-4.4.2
+- "nco" tools (ncrename, ncks, ...) are available via e.g.:
+module load intel/17.0 openmpi/intel/2.0.1 hdf5/1.8.17 netcdf/4.4.0_fortran-4.4.2 nco/4.4.6
+- in start_archive2icosa.f90, rearrange_startphy.f90, iodef.xml and
+  icosa_finalize.bash input/output file names are hard-coded.
+  Modify/adapt with caution!

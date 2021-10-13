@@ -1,0 +1,68 @@
+# The following script can be used to compile one of the utilities
+# program. Example of use :
+# > compile concat
+# > compile zrecast
+## BUT first you must customize this script to your personal settings:
+# 1) set up the correct environment; e.g. environment variable
+#    NETCDF_HOME should point to your NetCDF distribution root directory
+#    (and possibly you might need to "module load ..." a few things)
+# 2) put the appropriate compiler and compiler options
+#    in variables COMPILER and COMPILER_OPTIONS
+# 3) Note that when you will run the executable, you might need to
+#    also add the paths to the used libraries (e.g. $NETCDF_HOME/lib)
+#    in environment variable LD_LIBRARY_PATH (most often the "module load ..."
+#    command does this, so you should run it before running the executable) 
+
+# Setup: (see at the end of this script for real world examples)
+# possibly source some modules here and adapt variables below:
+NETCDF_HOME="/path/to/the/NetCDF/root/directory"
+COMPILER="gfortran"
+COMPILER_OPTIONS="-O2"
+
+# Compilation:
+# (on some very old systems the Fortran NetCDF library is included
+#  in the C library and "-lnetcdff" should be replaced with "-lnetcdf")
+
+$COMPILER $COMPILER_OPTIONS $1.F90 \
+-I$NETCDF_HOME/include \
+-L$NETCDF_HOME/lib -lnetcdff \
+-o $1.e
+
+#
+# Example of a setup on a simple Linux system where the netcdf library
+# is in a personal location /home/myacount/netcdf directory:
+# NETCDF_HOME=/home/myaccount/netcdf
+# COMPILER="gfortran"
+# COMPILER_OPTIONS="-O2"
+# And of course the LD_LIBRARY_PATH environement variable should contain
+# path "/home/myaccount/netcdf/lib" to be able to run the executable
+#
+# Example of a setup on LMD CentOS7 machines using gfortran and NetCDF 4.5:
+# module purge
+# module load gnu/7.2.0
+# module load netcdf4/4.5.0-gfortran72
+# NETCDF_HOME=/opt/netcdf45/gfortran72
+# COMPILER="gfortran"
+# COMPILER_OPTIONS="-O2"
+# And of course modules above need be loaded before running the executable
+#
+# Example of a setup on the Ciclad cluster using ifort and NetCDF 4.3
+# module purge
+# module load intel/15.0.6.233
+# module load netcdf4/4.3.3.1-ifort
+# NETCDF_HOME=/opt/netcdf43/ifort
+# COMPILER="ifort"
+# COMPILER_OPTIONS="-O2 -ip"
+# And of course modules above need be loaded before running the executable
+#
+# Example of a setup on the Occigen supercomputer
+# module purge
+# module load intel/17.0
+# module load intelmpi/2017.0.098
+# module load hdf5/1.8.17
+# module load netcdf/4.4.0_fortran-4.4.2
+# NETCDF_HOME=$NETCDFHOME
+# COMPILER="ifort"
+# COMPILER_OPTIONS="-O2 -ip"
+
+

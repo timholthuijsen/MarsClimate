@@ -1,0 +1,13 @@
+ROOT=$PWD
+
+NETCDF_LIBDIR="-L/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/netcdf/lib"
+NETCDF_LIB="-lnetcdf -lnetcdff"
+NETCDF_INCDIR="-I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/netcdf/include"
+
+IOIPSL_INCDIR="-I$ROOT/ioipsl/modipsl/lib"
+IOIPSL_LIBDIR="-L$ROOT/ioipsl/modipsl/lib"
+IOIPSL_LIB="-lioipsl"
+
+XIOS_INCDIR="-I$ROOT/../XIOS/inc"
+XIOS_LIBDIR="-L$ROOT/../XIOS/lib"
+XIOS_LIB="-lxios -lstdc++"

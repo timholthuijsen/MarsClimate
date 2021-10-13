@@ -1,0 +1,33 @@
+Path to fcm:
+/usr/bin
+calcul de la dimension
+dim 64 48 29
+dimc 3
+!-----------------------------------------------------------------------
+!   INCLUDE 'dimensions.h'
+!
+!   dimensions.h contient les dimensions du modele
+!   ndm est tel que iim=2**ndm
+!-----------------------------------------------------------------------
+
+      INTEGER iim,jjm,llm,ndm
+
+      PARAMETER (iim= 64,jjm=48,llm=29,ndm=1)
+
+!-----------------------------------------------------------------------
+dimension 3
+MACRO FILTRE FILTRE=filtrez
+3
+ERROR: /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/LMDZ.COMMON/bld.cfg: LINE 47:
+       bld::tool::fflags::muphy: invalid sub-package in declaration.
+ERROR: /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/LMDZ.COMMON/bld.cfg: LINE 59:
+       dir::bin: label not recognised.
+Build failed on Tue Jul  6 17:39:14 2021.
+Build command started on Tue Jul  6 17:39:14 2021.
+->Parse configuration: start
+Config file (bld): /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/LMDZ.COMMON/bld.cfg
+Config file (bld): arch.fcm
+Config file (bld): config.fcm
+Config file (bld): arch.opt
+->Parse configuration: 0 second
+->TOTAL: 0 second

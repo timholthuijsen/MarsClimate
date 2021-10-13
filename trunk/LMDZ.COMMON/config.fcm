@@ -1,0 +1,29 @@
+%ARCH          local
+%INCDIR         -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/LMDZ.COMMON/ioipsl/modipsl/lib -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/LMDZ.COMMON/libf/aeronomars -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/netcdf/include
+%LIB            -L/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/LMDZ.COMMON/ioipsl/modipsl/lib -lioipsl -L/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/netcdf/lib -lnetcdf -lnetcdff
+%ROOT_PATH     /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/LMDZ.COMMON
+%LIBF          /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/LMDZ.COMMON/libf
+%LIBO          /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/LMDZ.COMMON/libo
+%DYN           dyn3d
+%DYN_COMMON    /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/LMDZ.COMMON/libf/dyn3d_common
+%PHY_COMMON    /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/LMDZ.COMMON/libf/phy_common
+%FILTRE        /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/LMDZ.COMMON/libf/filtrez
+%PHYS          phymars
+%DYN_PHYS      /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/LMDZ.COMMON/libf/dynphy_lonlat
+%DYN_PHYS_SUB  /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/LMDZ.COMMON/libf/dynphy_lonlat/phymars
+%RRTM          /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/LMDZ.COMMON/.void_dir
+%DUST          /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/LMDZ.COMMON/.void_dir
+%STRATAER      /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/LMDZ.COMMON/.void_dir
+%SISVAT        /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/LMDZ.COMMON/.void_dir
+%COSP          /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/LMDZ.COMMON/.void_dir
+%CHEM          /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/LMDZ.COMMON/.void_dir
+%CLOUD         /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/LMDZ.COMMON/.void_dir
+%MUPHY         /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/LMDZ.COMMON/.void_dir
+%AERONO        /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/LMDZ.COMMON/libf/aeronomars
+%CPP_KEY        CPP_PHYS CPP_IOIPSL
+%EXEC          gcm
+%SUFF_NAME     _64x48x29_phymars_seq.e
+%COMPIL_FFLAGS %PROD_FFLAGS
+%PARA_FFLAGS   
+%PARA_LD       
+%EXT_SRC       

@@ -1,0 +1,325 @@
+<?xml version="1.0"?>
+<simulation>
+
+ <context id="test">
+   <calendar type="Gregorian"
+             start_date="2012-03-01 15:00:00"
+             time_origin="2012-02-29 15:00:00" />
+
+   <field_definition level="1" >    
+    <field_group  id="fields_2D_dst" domain_ref="src_domain_regular_clean" >
+      <!-- 2D fields -->
+      <field id="ps_clean" />
+      <field id="tsurf_clean" />
+      <field id="co2ice_clean" />
+      <field id="emis_clean" />
+      <!-- 2D fields associated to tracers-->
+      <field id="co2_surf_clean" />
+      <field id="dust_number_surf_clean" />
+      <field id="dust_mass_surf_clean" />
+      <field id="ccn_number_surf_clean" />
+      <field id="ccn_mass_surf_clean" />
+      <field id="h2o_ice_surf_clean" />
+      <field id="h2o_vap_surf_clean" />
+      <!-- orography fields -->
+      <field id="ZMEA_clean" />
+      <field id="ZSTD_clean" />
+      <field id="ZSIG_clean" />
+      <field id="ZGAM_clean" />
+      <field id="ZTHE_clean" />
+      <field id="albedodat_clean" />
+      <field id="z0_clean" />
+    </field_group>
+    <!-- -->
+    <field_group  id="fields_dst">
+      <!-- from topography file -->
+      <field id="topo" domain_ref="src_topo_domain_regular" />
+      <!-- 3D fields -->
+      <field id="temp_clean"
+             grid_ref="src_grid_regular_clean" />
+      <field id="theta_rhodz_clean"
+             grid_ref="src_grid_regular_clean" />
+      <field id="u_clean" grid_ref="src_grid_regular_clean" />
+      <field id="v_clean" grid_ref="src_grid_regular_clean" />
+      <!-- tracers -->
+      <field id="co2_clean" grid_ref="src_grid_regular_clean" />
+      <field id="dust_number_clean" grid_ref="src_grid_regular_clean" />
+      <field id="dust_mass_clean" grid_ref="src_grid_regular_clean" />
+      <field id="ccn_number_clean" grid_ref="src_grid_regular_clean" />
+      <field id="ccn_mass_clean" grid_ref="src_grid_regular_clean" />
+      <field id="h2o_ice_clean" grid_ref="src_grid_regular_clean" />
+      <field id="h2o_vap_clean" grid_ref="src_grid_regular_clean" />
+      <!-- soil -->
+      <field id="tsoil_clean" grid_ref="src_grid_soil_clean" />
+      <field id="inertiedat_clean" grid_ref="src_grid_soil_clean" />
+      <!-- q2 -->
+      <field id="q2_clean" grid_ref="src_grid_regular_p1_clean" />
+    </field_group>
+    
+   </field_definition>
+
+   <file_definition type="one_file" par_access="collective"
+                    output_freq="1ts" output_level="10"  enabled=".TRUE.">
+      <!-- input files -->
+      <file_group id="read_files" >
+       <file id="start_archive_nc4" name="start_archive_nc4" mode="read" >
+         <!-- 2D fields -->
+         <field_group freq_offset="1ts"
+                      domain_ref="src_domain_regular"
+                      operation="instant" >
+          <field id="src_ps" name="ps" />
+          <!--field id="src_phis" name="phisinit" /-->
+          <field id="src_tsurf" name="tsurf" />
+          <field id="src_co2ice" name="co2ice" />
+          <field id="src_emis" name="emis" />
+          <field id="src_q2surf" name="q2surf" />
+          <!--2D fields associated with tracers-->
+          <field id="src_co2_surf" name="co2_surf" />
+          <field id="src_dust_number_surf" name="dust_number_surf" />
+          <field id="src_dust_mass_surf" name="dust_mass_surf" />
+          <field id="src_ccn_number_surf" name="ccn_number_surf" />
+          <field id="src_ccn_mass_surf" name="ccn_mass_surf" />
+          <field id="src_h2o_ice_surf" name="h2o_ice_surf" />
+          <field id="src_h2o_vap_surf" name="h2o_vap_surf" />
+          <!--Subscale Orography-->
+          <field id="src_ZMEA" name="ZMEA" />
+          <field id="src_ZSTD" name="ZSTD" />
+          <field id="src_ZSIG" name="ZSIG" />
+          <field id="src_ZGAM" name="ZGAM" />
+          <field id="src_ZTHE" name="ZTHE" />
+          <field id="src_albedodat" name="albedodat" />
+          <field id="src_z0" name="z0" />
+         </field_group>
+         <!-- 3D fields -->
+          <field id="src_temp" name="temp" freq_offset="1ts"
+                 grid_ref="src_grid_regular"
+                 operation="instant" />
+          <field id="src_u" name="u" freq_offset="1ts"
+                 grid_ref="src_grid_regular"
+                 operation="instant" />
+          <field id="src_v" name="v" freq_offset="1ts"
+                 grid_ref="src_grid_regular"
+                 operation="instant" />
+          <field id="src_q2atm" name="q2atm" freq_offset="1ts"
+                 grid_ref="src_grid_regular"
+                 operation="instant" />
+        <!-- traceurs -->
+          <field id="src_trac1" name="co2" freq_offset="1ts"
+                 grid_ref="src_grid_regular"
+                 operation="instant" />
+          <field id="src_trac2" name="dust_number" freq_offset="1ts"
+                 grid_ref="src_grid_regular"
+                 operation="instant" />
+          <field id="src_trac3" name="dust_mass" freq_offset="1ts"
+                 grid_ref="src_grid_regular"
+                 operation="instant" />
+          <field id="src_trac4" name="ccn_number" freq_offset="1ts"
+                 grid_ref="src_grid_regular"
+                 operation="instant" />
+          <field id="src_trac5" name="ccn_mass" freq_offset="1ts"
+                 grid_ref="src_grid_regular"
+                 operation="instant" />
+          <field id="src_trac6" name="h2o_ice" freq_offset="1ts"
+                 grid_ref="src_grid_regular"
+                 operation="instant" />
+          <field id="src_trac7" name="h2o_vap" freq_offset="1ts"
+                 grid_ref="src_grid_regular"
+                 operation="instant" />
+         <!-- soil fields -->
+          <field id="src_tsoil" name="tsoil" freq_offset="1ts"
+                 grid_ref="src_grid_soil"
+                 operation="instant" />
+          <field id="src_inertiedat" name="inertiedat" freq_offset="1ts"
+                 grid_ref="src_grid_soil"
+                 operation="instant" />
+       </file>
+       <file id="surface_nc4" name="surface_nc4" mode="read" >
+         <field id="zMOL" name="zMOL" 
+                domain_ref="src_topo_domain_regular"
+                freq_offset="1ts"
+                operation="instant" />
+       </file>
+      </file_group>
+      
+      <!-- output files -->
+      <file_group id="write_files" >
+        <file id="start_icosa_prefinalize" name="start_icosa_prefinalize" >
+         <!-- 2D fields -->
+         <field_group domain_ref="dst_domain_unstructured"
+                      operation="once" >
+          <field field_ref="ps_clean" name="ps" />
+          <!-- <field field_ref="phis_clean" name="phis" /> -->
+          <field field_ref="topo" name="phis" />
+         </field_group>
+         <!-- 3D fields -->
+          <field field_ref="theta_rhodz_clean" name="theta_rhodz"
+                 grid_ref="dst_grid_unstructured"
+                 operation="once" />
+          <field field_ref="u_clean" name="ulon"
+                 grid_ref="dst_grid_unstructured"
+                 operation="once" />
+          <field field_ref="v_clean" name="ulat"
+                 grid_ref="dst_grid_unstructured"
+                 operation="once" />
+          <!-- tracers -->
+          <field field_ref="co2_clean" name="co2"
+                 grid_ref="dst_grid_unstructured"
+                 operation="once" />
+          <field field_ref="dust_number_clean" name="dust_number"
+                 grid_ref="dst_grid_unstructured"
+                 operation="once" />
+          <field field_ref="dust_mass_clean" name="dust_mass"
+                 grid_ref="dst_grid_unstructured"
+                 operation="once" />
+          <field field_ref="ccn_number_clean" name="ccn_number"
+                 grid_ref="dst_grid_unstructured"
+                 operation="once" />
+          <field field_ref="ccn_mass_clean" name="ccn_mass"
+                 grid_ref="dst_grid_unstructured"
+                 operation="once" />
+          <field field_ref="h2o_ice_clean" name="h2o_ice"
+                 grid_ref="dst_grid_unstructured"
+                 operation="once" />
+          <field field_ref="h2o_vap_clean" name="h2o_vap"
+                 grid_ref="dst_grid_unstructured"
+                 operation="once" />
+        </file>
+        <file id="startfi_prefinalize" name="startfi_prefinalize" >
+         <!-- 2D fields -->
+         <field_group domain_ref="dst_domain_unstructured"
+                      operation="once" >
+          <field field_ref="tsurf_clean" name="tsurf" />
+          <field field_ref="co2ice_clean" name="co2ice" />
+          <field field_ref="emis_clean" name="emis" />
+         <!-- 2D fields associated to tracers -->
+          <field field_ref="co2_surf_clean" name="co2_surf" />
+          <field field_ref="dust_number_surf_clean" name="dust_number_surf" />
+          <field field_ref="dust_mass_surf_clean" name="dust_mass_surf" />
+          <field field_ref="ccn_number_surf_clean" name="ccn_number_surf" />
+          <field field_ref="ccn_mass_surf_clean" name="ccn_mass_surf" />
+          <field field_ref="h2o_ice_surf_clean" name="h2o_ice_surf" />
+          <field field_ref="h2o_vap_surf_clean" name="h2o_vap_surf" />
+         <!-- Topo -->
+          <field field_ref="topo" name="phisfi" />
+          <field field_ref="ZMEA_clean" name="ZMEA" />
+          <field field_ref="ZSTD_clean" name="ZSTD" />
+          <field field_ref="ZSIG_clean" name="ZSIG" />
+          <field field_ref="ZTHE_clean" name="ZTHE" />
+          <field field_ref="ZGAM_clean" name="ZGAM" />
+          <field field_ref="albedodat_clean" name="albedodat" />
+          <field field_ref="z0_clean" name="z0" />
+         </field_group>
+         <!-- soil fields -->
+          <field field_ref="tsoil_clean" name="tsoil"
+                 grid_ref="dst_grid_soil_unstructured"
+                 operation="once" />
+          <field field_ref="inertiedat_clean" name="inertiedat"
+                 grid_ref="dst_grid_soil_unstructured"
+                 operation="once" />
+         <!-- q2 field -->
+          <field field_ref="q2_clean" name="q2"
+                 grid_ref="dst_p1_grid_unstructured"
+                 operation="once" />
+         <!-- 3D fields -->
+        </file>
+      </file_group>
+   </file_definition>
+
+   <axis_definition>
+     <axis id="lev" positive="down"
+           standard_name="atmosphere_hybrid_sigma_pressure_coordinate"
+           long_name="hybrid level at midpoints" />
+     <axis id="lev_p1" positive="down" />
+     <axis id="nq" name="nq" />
+     <axis id="soil_layers" name="subsurface_layers" />
+   </axis_definition>
+
+   <domain_definition>
+    <domain_group id="read_domains">
+      <domain id="src_domain_regular" type="rectilinear">
+        <!-- <generate_rectilinear_domain /> -->
+      </domain>
+      <domain id="src_domain_regular_clean" type="rectilinear">
+        <!-- <generate_rectilinear_domain /> -->
+      </domain>
+      <domain id="src_topo_domain_regular" type="rectilinear">
+        <!-- <generate_rectilinear_domain /> -->
+      </domain>
+    </domain_group>
+
+    <domain_group id="domain_dst">
+     <domain id="dst_domain_unstructured" type="unstructured">
+       <interpolate_domain order="1" renormalize="true" />
+     </domain>
+    </domain_group>
+   </domain_definition>
+
+   <grid_definition>
+    <grid_group id="read_grids">
+      <grid id="src_grid_regular">
+        <domain domain_ref="src_domain_regular" />
+        <axis axis_ref="lev" />
+      </grid>
+      <grid id="src_grid_regular_clean">
+        <domain domain_ref="src_domain_regular_clean" />
+        <axis axis_ref="lev" />
+      </grid>
+      <grid id="src_grid_regular_p1_clean">
+        <domain domain_ref="src_domain_regular_clean" />
+        <axis axis_ref="lev_p1" />
+      </grid>
+      <grid id="src_nq_grid_regular_clean">
+        <domain domain_ref="src_domain_regular_clean" />
+        <axis axis_ref="lev" />
+        <axis axis_ref="nq" />
+      </grid>
+      <grid id="src_grid_soil">
+        <domain domain_ref="src_domain_regular" />
+        <axis axis_ref="soil_layers" />
+      </grid>
+      <grid id="src_grid_soil_clean">
+        <domain domain_ref="src_domain_regular_clean" />
+        <axis axis_ref="soil_layers" />
+      </grid>
+    </grid_group>
+    
+    <grid_group id="grid_dst">
+      <grid id="dst_grid_unstructured">
+        <domain domain_ref="dst_domain_unstructured" />
+        <axis axis_ref="lev" />
+      </grid>
+      <grid id="dst_p1_grid_unstructured">
+        <domain domain_ref="dst_domain_unstructured" />
+        <axis axis_ref="lev_p1" />
+      </grid>
+      <grid id="dst_nq_grid_unstructured">
+        <domain domain_ref="dst_domain_unstructured" />
+        <axis axis_ref="lev" />
+        <axis axis_ref="nq" />
+      </grid>
+      <grid id="dst_grid_soil_unstructured">
+        <domain domain_ref="dst_domain_unstructured" />
+        <axis axis_ref="soil_layers" />
+      </grid>
+    </grid_group>
+
+   </grid_definition>
+
+  </context>
+
+  <context id="xios">
+      <variable_definition>
+        <variable_group id="buffer">
+            <variable id="optimal_buffer_size" type="string">performance</variable>
+            <variable id="buffer_size_factor" type="double">30.0</variable>
+            <variable id="min_buffer_size" type="double">800000</variable>
+         </variable_group>
+
+        <variable_group id="parameters" >
+          <variable id="using_server" type="bool">false</variable>
+          <variable id="info_level" type="int">100</variable>
+          <variable id="print_file" type="bool">false</variable>
+        </variable_group>
+      </variable_definition>
+  </context>
+</simulation>

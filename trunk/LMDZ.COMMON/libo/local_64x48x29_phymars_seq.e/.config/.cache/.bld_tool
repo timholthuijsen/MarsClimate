@@ -1,0 +1,40 @@
+FC_OUTPUT     -o
+REMOTE_SHELL  remsh
+MAKE_SILENT   -s
+CC_COMPILE    -c
+FPP_INCLUDE   -I
+FC_DEFINE     -D
+CPPKEYS       CPP_PHYS CPP_IOIPSL LAPACK
+FPP_DEFINE    -D
+GRAPHIC_DIFF  xxdiff
+MAKE_JOB      -j
+FPPFLAGS      -P -traditional -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/LMDZ.COMMON/ioipsl/modipsl/lib -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/LMDZ.COMMON/libf/aeronomars -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/netcdf/include
+FC_INCLUDE    -I
+FPP           cpp
+CC            gcc
+CFLAGS        -O3 -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/LMDZ.COMMON/ioipsl/modipsl/lib -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/LMDZ.COMMON/libf/aeronomars -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/netcdf/include
+LD_OUTPUT     -o
+CPP_DEFINE    -D
+MAKEFLAGS     
+AR            ar
+FPPKEYS       CPP_PHYS CPP_IOIPSL NC_DOUBLE
+MIRROR        rsync
+LD            gfortran
+MAKE          make
+LD_LIBSEARCH  -L
+CC_OUTPUT     -o
+GENINTERFACE  none
+CPP_INCLUDE   -I
+FFLAGS__muphy -c -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/LMDZ.COMMON/ioipsl/modipsl/lib -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/LMDZ.COMMON/libf/aeronomars -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/netcdf/include -O3 
+CC_DEFINE     -D
+FC_COMPILE    -c
+LD_LIBLINK    -l
+FFLAGS        -c -fdefault-real-8 -fdefault-double-8 -ffree-line-length-none -fno-align-commons -O3  -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/LMDZ.COMMON/ioipsl/modipsl/lib -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/LMDZ.COMMON/libf/aeronomars -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/netcdf/include
+SHELL         /bin/bash
+INTERFACE     file
+LDFLAGS         -L/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/LMDZ.COMMON/ioipsl/modipsl/lib -lioipsl -L/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/netcdf/lib -lnetcdf -lnetcdff
+CC_INCLUDE    -I
+CPPFLAGS      -P -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/LMDZ.COMMON/ioipsl/modipsl/lib -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/LMDZ.COMMON/libf/aeronomars -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/netcdf/include
+CPP           cpp
+FC            gfortran
+ARFLAGS       rs

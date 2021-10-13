@@ -1,0 +1,21 @@
+#!/bin/bash
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=14
+### set --threads-per-core=2 for hyperthreading
+#SBATCH --threads-per-core=1
+#SBATCH -J remap_XIOS
+#SBATCH --time=00:20:00
+#SBATCH --output job_mpi.%j.out
+#SBATCH --constraint=BDW28
+##SBATCH --constraint=HSW24
+##SBATCH --mem=8G
+#SBATCH --exclusive
+
+set -vx
+
+source /scratch/cnt0027/lmd1167/adelavois/models/code/XIOS/arch.env
+
+#printenv | sort
+
+srun --resv-ports --kill-on-bad-exit=1 --mpi=pmi2 --label -n $SLURM_NTASKS  start_archive2icosa > start_archive2icosa.out 2>&1
+

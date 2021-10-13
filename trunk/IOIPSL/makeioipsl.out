@@ -1,0 +1,60 @@
+Warning: /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/IOIPSL/bld.cfg: variable "%FPP_DEF" not expanded.
+Warning: /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/IOIPSL/bld.cfg: variable "%FPP" not expanded.
+Build command started on Tue Jul  6 17:39:04 2021.
+->Setup              : start
+# Config file (bld): /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/IOIPSL/bld.cfg
+# Config file (bld): arch.fcm
+# Config file (bld): config.fcm
+Make directory: /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/IOIPSL/build/.cache
+->Setup              : 0 second
+->Pre-process        : start
+->Pre-process        : 0 second
+->Scan dependency    : start
+Scanned files in 2 package(s) for dependency
+Updated make rules for 2 package(s).
+Updated Makefile: /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/IOIPSL/build/bld/Makefile
+->Scan dependency    : 1 second
+->Generate interface : start
+->Generate interface : 0 second
+->Make               : start
+gfortran -o errioipsl.o -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/IOIPSL/build/inc -c -fdefault-real-8 -fdefault-double-8 -ffree-line-length-none -fno-align-commons -fcray-pointer -O3 -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/netcdf/include /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/IOIPSL/src/errioipsl.f90
+gfortran -o stringop.o -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/IOIPSL/build/inc -c -fdefault-real-8 -fdefault-double-8 -ffree-line-length-none -fno-align-commons -fcray-pointer -O3 -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/netcdf/include /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/IOIPSL/src/stringop.f90
+gfortran -o defprec.o -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/IOIPSL/build/inc -c -fdefault-real-8 -fdefault-double-8 -ffree-line-length-none -fno-align-commons -fcray-pointer -O3 -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/netcdf/include /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/IOIPSL/src/defprec.f90
+gfortran -o calendar.o -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/IOIPSL/build/inc -c -fdefault-real-8 -fdefault-double-8 -ffree-line-length-none -fno-align-commons -fcray-pointer -O3 -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/netcdf/include /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/IOIPSL/src/calendar.f90
+gfortran -o getincom.o -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/IOIPSL/build/inc -c -fdefault-real-8 -fdefault-double-8 -ffree-line-length-none -fno-align-commons -fcray-pointer -O3 -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/netcdf/include /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/IOIPSL/src/getincom.f90
+gfortran -o mathelp.o -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/IOIPSL/build/inc -c -fdefault-real-8 -fdefault-double-8 -ffree-line-length-none -fno-align-commons -fcray-pointer -O3 -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/netcdf/include /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/IOIPSL/src/mathelp.f90
+/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/IOIPSL/src/calendar.f90:365:0:
+
+  365 |         tmp_str = tmp_str(y_pos+1:LEN_TRIM(tmp_str))
+      | 
+Warning: ‘__builtin_memmove’ reading 80 bytes from a region of size 79 [-Wstringop-overflow=]
+/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/IOIPSL/src/calendar.f90:373:0:
+
+  373 |         tmp_str = tmp_str(m_pos+1:LEN_TRIM(tmp_str))
+      | 
+Warning: ‘__builtin_memmove’ reading 80 bytes from a region of size 79 [-Wstringop-overflow=]
+/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/IOIPSL/src/calendar.f90:378:0:
+
+  378 |         tmp_str = tmp_str(d_pos+1:LEN_TRIM(tmp_str))
+      | 
+Warning: ‘__builtin_memmove’ reading 80 bytes from a region of size 79 [-Wstringop-overflow=]
+/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/IOIPSL/src/calendar.f90:388:0:
+
+  388 |         tmp_str = tmp_str(s_pos+1:LEN_TRIM(tmp_str))
+      | 
+Warning: ‘__builtin_memmove’ reading 80 bytes from a region of size 79 [-Wstringop-overflow=]
+gfortran -o fliocom.o -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/IOIPSL/build/inc -c -fdefault-real-8 -fdefault-double-8 -ffree-line-length-none -fno-align-commons -fcray-pointer -O3 -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/netcdf/include /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/IOIPSL/src/fliocom.f90
+gfortran -o flincom.o -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/IOIPSL/build/inc -c -fdefault-real-8 -fdefault-double-8 -ffree-line-length-none -fno-align-commons -fcray-pointer -O3 -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/netcdf/include /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/IOIPSL/src/flincom.f90
+gfortran -o restcom.o -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/IOIPSL/build/inc -c -fdefault-real-8 -fdefault-double-8 -ffree-line-length-none -fno-align-commons -fcray-pointer -O3 -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/netcdf/include /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/IOIPSL/src/restcom.f90
+gfortran -o histcom.o -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/IOIPSL/build/inc -c -fdefault-real-8 -fdefault-double-8 -ffree-line-length-none -fno-align-commons -fcray-pointer -O3 -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/netcdf/include /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/IOIPSL/src/histcom.f90
+gfortran -o ioipsl.o -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/IOIPSL/build/inc -c -fdefault-real-8 -fdefault-double-8 -ffree-line-length-none -fno-align-commons -fcray-pointer -O3 -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/netcdf/include /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/IOIPSL/src/ioipsl.f90
+ar rs /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/IOIPSL/build/tmp/libioipsl.a calendar.o defprec.o errioipsl.o flincom.o fliocom.o getincom.o histcom.o ioipsl.o mathelp.o restcom.o stringop.o
+gfortran -o flio_rbld.o -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/IOIPSL/build/inc -c -fdefault-real-8 -fdefault-double-8 -ffree-line-length-none -fno-align-commons -fcray-pointer -O3 -I/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/netcdf/include /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/IOIPSL/rebuild/flio_rbld.f90
+ar: creating /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/IOIPSL/build/tmp/libioipsl.a
+ar: creating /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/IOIPSL/build/tmp/lib__fcm__flio_rbld.a
+gfortran -o flio_rbld.exe /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/IOIPSL/build/obj/flio_rbld.o -L/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/IOIPSL/build/lib -l__fcm__flio_rbld -L/mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/netcdf/lib -lnetcdff
+readdir() attempted on invalid dirhandle DIR at /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/IOIPSL/tools/FCM_V1.2/lib/Fcm/Build.pm line 1945.
+closedir() attempted on invalid dirhandle DIR at /mnt/d/OneDrive/MarsClimate/MetJacky/NextAttempt/trunk/IOIPSL/tools/FCM_V1.2/lib/Fcm/Build.pm line 1947.
+->Make               : 7 seconds
+->TOTAL              : 8 seconds
+Build command finished on Tue Jul  6 17:39:12 2021.
